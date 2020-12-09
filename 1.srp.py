@@ -44,9 +44,9 @@ responsibility of storing an animal to a database:
 
 class Animal:
     def __init__(self, name: str):
-            self.name = name
+        self.name = name
     
-    def get_name(self):
+    def get_name(self) -> str:
         pass
 
 
@@ -75,7 +75,7 @@ class Animal:
         self.name = name
         self.db = AnimalDB()
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self.name
 
     def get(self, id):
