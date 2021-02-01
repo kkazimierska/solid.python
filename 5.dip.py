@@ -22,13 +22,13 @@ class Http:
     def get(self, url: str, options: dict):
         self.xml_http_service.request(url, 'GET')
 
-    def post(self, url, options: dict):
+    def post(self, url: str, options: dict):
         self.xml_http_service.request(url, 'POST')
 
 """
 Here, Http is the high-level component whereas XMLHttpService is the low-level
 component.  This design violates DIP A: High-level modules should not depend on
-low-level level modules. It should depend upon its abstraction.
+low-level modules. It should depend upon its abstraction.
 
 Ths Http class is forced to depend upon the XMLHttpService class.  If we were to
 change the Http connection service, maybe we want to connect to the internet
@@ -56,7 +56,7 @@ class Http:
     def get(self, url: str, options: dict):
         self.http_connection.request(url, 'GET')
 
-    def post(self, url, options: dict):
+    def post(self, url: str, options: dict):
         self.http_connection.request(url, 'POST')
 
 """
