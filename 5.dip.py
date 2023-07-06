@@ -18,7 +18,7 @@ class XMLHttpService(XMLHttpRequestService):
 class Http:
     def __init__(self, xml_http_service: XMLHttpService):
         self.xml_http_service = xml_http_service
-    
+
     def get(self, url: str, options: dict):
         self.xml_http_service.request(url, 'GET')
 
@@ -52,7 +52,7 @@ of type Connection to our Http class:
 class Http:
     def __init__(self, http_connection: Connection):
         self.http_connection = http_connection
-    
+
     def get(self, url: str, options: dict):
         self.http_connection.request(url, 'GET')
 
@@ -67,6 +67,8 @@ connection.
 We can now re-implement our XMLHttpService class to implement the Connection
 interface:
 """
+# https://www.w3schools.com/xml/xml_http.asp
+# xml or html request
 
 class XMLHttpService(Connection):
     xhr = XMLHttpRequest()

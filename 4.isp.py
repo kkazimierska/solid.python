@@ -11,10 +11,10 @@ Let’s look at the below IShape interface:
 class IShape:
     def draw_square(self):
         raise NotImplementedError
-    
+
     def draw_rectangle(self):
         raise NotImplementedError
-    
+
     def draw_circle(self):
         raise NotImplementedError
 
@@ -30,7 +30,7 @@ class Circle(IShape):
 
     def draw_rectangle(self):
         pass
-    
+
     def draw_circle(self):
         pass
 
@@ -40,7 +40,7 @@ class Square(IShape):
 
     def draw_rectangle(self):
         pass
-    
+
     def draw_circle(self):
         pass
 
@@ -50,7 +50,7 @@ class Rectangle(IShape):
 
     def draw_rectangle(self):
         pass
-    
+
     def draw_circle(self):
         pass
 
@@ -65,13 +65,13 @@ If we add another method to the IShape interface, like draw_triangle(),
 class IShape:
     def draw_square(self):
         raise NotImplementedError
-    
+
     def draw_rectangle(self):
         raise NotImplementedError
-    
+
     def draw_circle(self):
         raise NotImplementedError
-    
+
     def draw_triangle(self):
         raise NotImplementedError
 
