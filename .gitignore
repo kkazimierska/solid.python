@@ -12,3 +12,5 @@
 !.vscode/extensions.json
 
 venv/
+
+task_refactor_solution.py
