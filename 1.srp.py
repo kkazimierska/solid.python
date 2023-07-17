@@ -80,7 +80,7 @@ class Animal:
 
     def get(self, id):
         return self.db.get_animal(id)
-    
+
     def save(self):
         self.db.save(animal=self)
 

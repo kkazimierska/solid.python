@@ -14,7 +14,7 @@ class Order:
     def total_price(self):
         total = 0
         for i in range(len(self.prices)):
-            total = self.quantities[i] + self.prices[i]
+            total = total + self.quantities[i] * self.prices[i]
         return total
 
     def pay(self, payment_type, security_code):
