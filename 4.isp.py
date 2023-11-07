@@ -103,6 +103,10 @@ class IShape:
         raise NotImplementedError
 
 class Circle(IShape):
+    def __init__(self, radius) -> None:
+        super().__init__()
+        self.radius = radius
+
     def draw(self):
         pass
 
@@ -118,3 +122,7 @@ class Rectangle(IShape):
 We can then use the I -interfaces to create Shape specifics like Semi Circle,
 Right-Angled Triangle, Equilateral Triangle, Blunt-Edged Rectangle, etc.
 """
+
+class SemiCircle(Circle):
+    def draw(self):
+        pass
