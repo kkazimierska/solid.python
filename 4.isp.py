@@ -124,5 +124,5 @@ Right-Angled Triangle, Equilateral Triangle, Blunt-Edged Rectangle, etc.
 """
 
 class SemiCircle(Circle):
-    def draw(self):
+    def draw_half(self):
         pass
