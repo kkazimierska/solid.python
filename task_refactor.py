@@ -26,18 +26,7 @@ order.add_item("SSD", 1, 50)
 
 from abc import abstractmethod, ABC
 
-class PaymentProcessorSMS(ABC):
 
-    def set_status(self, order):
-        order.status = "paid"
-
-    @abstractmethod
-    def auth_sms(self, code):
-        pass
-
-    @abstractmethod
-    def pay(self, order):
-        pass
 
 class PaymentProcessor(ABC):
 
@@ -47,6 +36,13 @@ class PaymentProcessor(ABC):
     @abstractmethod
     def pay(self, order):
         pass
+
+class PaymentProcessorSMS(PaymentProcessor):
+
+    @abstractmethod
+    def auth_sms(self, code):
+        pass
+
 
 class DebitPaymentProcessor(PaymentProcessorSMS):
     def __init__(self, security_code: int) -> None:
@@ -87,5 +83,5 @@ class PayPalPaymentProcessor(PaymentProcessor):
         self.set_status(order)
 
 payment_processor = DebitPaymentProcessor(1234)
-# payment_processor.auth_sms(123)
+payment_processor.auth_sms(123)
 payment_processor.pay(order)
